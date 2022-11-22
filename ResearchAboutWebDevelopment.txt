@@ -47,7 +47,7 @@ Tipler isteğe bağlıdır ancak bileşenler arasındaki arabirimleri (interface
 Javascript’tebeş tane veri tipi mevcuttur. Bunlar: Boolean, null, undefined, string ve number. Bu veri tiplerine primitif tip diyoruz.
 Ayrıca Javascript’te referans tipinde, 3 üç tane veri tipi vardır. Bunlar: Array, Function, ve Object. Bunlar temelde Nesnedir(Object), bu yüzden hepsine Nesne(Object) diyeceğiz.
 
-Primitifler
+Primitive'ler
 
 Eğer primitif bir veri tipi, bir değişkene atanırsa, bu değişkeni primitif değeri içeren olarak düşünebiliriz.
 var x = 10;
