@@ -1,0 +1,140 @@
+!! SPA !!
+
+İlk zamanlar web uygulamalarımızda kullanıcı sunucudan bir statik sayfayı istiyordu ve sunucu istenen sayfayı istemci tarafına (tarayıcı olarak düşünebiliriz) geri döndürüyordu.
+Ancak bu durum zamanla gelişti ve sunucular sizin gönderdiğiniz isteğe göre dinamik sayfalar üretmeye başladılar. Yani gelen sayfa dinamik olarak genellikle bir veritabanında depolanan 
+veriler sayesinde oluşturuluyor ve istemciye gönderiliyordu.Ancak halen sunucudan tüm sayfa geliyordu.Yani sitede gezinen kullanıcı bu tüm sayfanın sürekli baştan yüklenmesinden kaynaklı
+daha yavaş bir internet deneyimi yaşıyordu. Ancak AJAX teknolojisinin çıkması ve gelişmesi ile bu durum değişti. AJAX çağrıları ile sayfanın yalnızca belli kısımları değişiyor ve sunucuya
+gönderiliyordu.
+
+SPA ile gelen yenilik ne oldu?
+
+Single Page Application ile sunucudaki yük daha da hafifletildi ve istemci tarafına daha çok yük bindi. Sunucu tarafında karar verilen routing istemci tarafında JavaScript tarafından
+yapılmaya başlandı. Ancak burada önemli nokta bilgisayarlarımız geliştiği için herkesin bu işlemi tek sunucuda yapması yerine kendi tarayıcısında yapması internet deneyimini çok değiştirdi. Yani kullanıcılar sitede daha hızlı gezinebilir oldular. Her geçen gün yeni bir framework çıkmasının altındaki sebeplerden birisi de bu aslında. Her biri webte daha hızlı gezinmeyi vaad ediyor.
+Single Page Application, sunucudan yeni sayfaların tamamını yüklemek yerine geçerli sayfayı dinamik olarak yeniden yazarak kullanıcıyla etkileşime giren bir web uygulaması veya 
+web sitesidir.
+
+SPA, her tıklamayla yalnızca ihtiyacınız olanı gönderir ve tarayıcınız bu bilgileri işler. Bu, sunucunun yaptığınız her tıklamayla tam sayfayı yeniden oluşturduğu ve tarayıcınıza gönderdiği
+geleneksel bir sayfa yüklemesinden farklıdır.
+
+Single Page Applicationlarda yönlendirme işlemi backend tarafından değil client tarafında yapılır. Bir tane index sayfamız oluyor ve client tarafında sayfalar yönlendirme ile değiştiriliyor
+ve render ediliyor. Bu sayede yeni bir sayfaya geçmiş etkisi veriyor.
+
+Bu parça parça, istemci tarafı yöntemi, kullanıcılar için yükleme süresini daha hızlı hale getirir ve bir sunucunun göndermesi gereken bilgi miktarını çok daha az ve çok daha uygun 
+maliyetli hale getirir.
+
+!! ANGULAR !! 
+
+Angular, Google tarafından desteklenen, dünya genelinde yazılımcılar tarafından katkı sağlanan açık kaynak kodlu, javascript tabanlı MVC deseni üzerine kurgulanmış bir kütüphanedir.
+Kısa ifadesi ile; dinamik web uygulamaları için yapısal bir framework’dür. HTML’i şablon dili olarak kullanmamızı sağlar ve uygulamanın bileşenlerini açık bir şekilde ifade etmek için HTML
+etiketlerini genişletmemize olanak sağlar.
+
+Angular modüler bir yapıya sahiptir. Uygulumanızı parçalara bölebilir ve tekrar kullanabilirsiniz. Diğer frameworklere göre daha esnek bir yapıya sahiptir.Kullanıcıya daha fazla kontrol
+edebileceği alanlar sunar. Diğer SPA uygulamalarından ayıran en büyük farkı ise paketler ile birlikte gelmesidir.
+
+Kısacası kompleks bir uygulama geliştireceksek, Angular’ ın paketler ile birlikte gelmesi ve MVC (Model-View-Controller) yapısını kullanması dolayısı ile projeyi yönetmemiz Angular ile
+daha kolay olacaktır.
+
+!! TYPESCRIPT !!
+
+Typescript, JavaScript ile daha hızlı ve anlaşılır kod geliştirmemizi sağlayan bir ortamdır. Herhangi bir tarayıcıda, herhangi bir JavaScript motorunda çalışan temiz, basit Javascript kodu 
+derler.
+
+Typescript içerisinde tipleri barındırır ve tipler JavaScript geliştirme aşamasında kontrollü, kolay ve hızlı şekilde, yeniden düzenlenebilir uygulama geliştirme imkanı sağlar.
+Tipler isteğe bağlıdır ancak bileşenler arasındaki arabirimleri (interface) tanımlamamıza ve davranışları hakkında bilgi edinmemize olanak sağlar
+
+!! JS'DE DEĞER VE REFERANS TİPLER !!
+
+Javascript’tebeş tane veri tipi mevcuttur. Bunlar: Boolean, null, undefined, string ve number. Bu veri tiplerine primitif tip diyoruz.
+Ayrıca Javascript’te referans tipinde, 3 üç tane veri tipi vardır. Bunlar: Array, Function, ve Object. Bunlar temelde Nesnedir(Object), bu yüzden hepsine Nesne(Object) diyeceğiz.
+
+Primitifler
+
+Eğer primitif bir veri tipi, bir değişkene atanırsa, bu değişkeni primitif değeri içeren olarak düşünebiliriz.
+var x = 10;
+var y = 'abc';
+var z = null;
+
+Bu değişkenleri = kullanarak başka bir değişkenlere atadığımız zaman; yeni değişkenlere değerleri kopyalıyoruz.
+var x = 10;
+var y = 'abc';
+var a = x;
+var b = y;
+console.log(x, y, a, b); // -> 10, 'abc', 10, 'abc'
+a and x değişkenleri 10 değerini içeriyor. b and y değişlenleri de 'abc' değerini içeriyor. Değerler kopyalandığı için, hepsi birbirinden ayrıdırlar.
+
+Nesneler(Objects)
+
+Değişkenler; primitif olmayan bir değişkene atandığı zaman, bu değere bir referans verilir. Nesnenin hafızadaki konumuna işaret eder. Bu değişken aslında değişkeni gerçekte içermez.
+Nesneler, bilgisayarınızın belleğinde bir noktada yaratılır. arr = [] yazdığımız zaman, bellekte bir dizi(array) yaratmış oluyoruz. arr değişkenin aldığı adres, dizinin bellekteki konumudur.
+
+			                                       Variables     Values       Adresses    Objects        
+1) var arr = [];                  Bellekteki konumu =>          arr          <#001>        #001        [ ]
+2) arr.push(1);                                                 arr          <#001>        #001        [1]
+
+Değişkenin değerini ve adres bilgisini içeren, arr statiktir.Bellekte bulunan dizide bir işlem yapıldığında örneğin diziye yeni bir değer atandığında JS motoru arr'nin bellekteki yerine
+gider ve burada tutulan bilgiye işlem yapar.
+Referans tipindeki bir nesne = kullanılarak bir değişkene koplayalandığında değerin kendisi değil , nesnenin bellekteki adresi kopyalanır.
+
+			                                        Variables     Values     Adresses   Objects        
+var reference = [1];          Bellekteki konumu =>              reference     <#001>      #001         [1]
+var refCopy = reference;                                        refCopy       <#001>
+
+Her iki değişken de aynı dizinin referansını içerir. Bu demektir ki; eğer reference değişkenini değiştirirsek aynı değişiklikleri refCopy değişkeninde de göreceğiz.
+reference.push(2);
+console.log(reference, refCopy); // -> [1, 2], [1, 2]
+
+Bellekteki yeni konumları =>     reference     <#001>      #001         [1,2]
+                                 refCopy        <#001>
+
+2 değerini bellekteki diziye ekledik(push). reference ve refCopy’yi kullandığımızda bellekteki aynı diziye işaret ediyoruz.
+
+!! S'DE DEĞER VE REFERANS TİPLER !!
+
+Typescript’deki veri tipleri javascript’dekine benzerlik göstermektedir. Ek olarak şu veri tipleri kullanılır:
+
+Any: Özellikle başlangıçta alabileceği değerler bilinmeyen değişkenleri için kullanılan veri tipidir. Bu tip ile tanımlanan değişkenler hem metin hem de sayı değeri alabilir.
+İlk aldığı değere göre veri tipi düzenlenir.
+Array olarak da tanımlanabilir. 
+let arr: any[] = ["John", 212, true]; arr.push("Smith"); console.log(arr); //Output: [ 'John', 212, true, 'Smith' ]
+
+Void (Boş/Hükümsüz) : Sadece anlamlı bir değer dönmeyen fonksiyonları tanımlamak için kullanılır.
+function sayHi(): void { console.log('Hi!') } 
+let speech: void = sayHi(); console.log(speech); //Output: undefined
+Değişken tanımlamalarında kullanılmaz.
+let nothing: void = undefined;
+let num: void = 1; // Error
+
+Never: Sadece typescript’e has bir veri tipidir.  Eğer herhangi bir değer dönmeyecek veya hataya düşme olasılıkları olan geri dönüşler için kullanılır.
+Void ile Never arasındaki fark nedir? 
+Void tanımsız (undefined) veya boş (null) bir değerde olabilir. Never benzer herhangi bir değer alamaz.
+Burada ufak bir nüans daha var. Typescript’de aksi belirtilmediği sürece bir fonksiyon daima değer döner. Dönmüyorsa bile undefined döner.
+function sayHi(): void { 
+    console.log('Hi!')
+}
+let speech: void = sayHi();
+console.log(speech); // undefined
+
+Eğer yukarıdaki speech fonksiyonu never olarak tanımlanırsa derleyici hata olarak döner.
+
+!! STACK && HEAP !!
+Stack ve Heap bellekte (RAM’de) bulunan mantıksal yapılardırdır. Değer tipler (value type) stackte tutulur. Stackte veriler üst üste (LIFO– Last in First out) mantığında dizilir ve sırası
+gelmeden aradaki bir değer ile işlem yapılamaz. Class type (Sınıf tipi) değişkenler referans tiplerdir, referans ettikleri model (referans) stackte değerleri ise heapde saklanır. 
+
+NOT: Değer tipler veriyi tutan değişken türleridir. Referans tipler ise veri yerine verinin bellekteki adresini tutan değişken türleridir.
+(Referans tiplere string, array, interface, class, pointer’ı örnek olarak vermek mümkün.)
+
+Stack ve Heap Arasındaki Farklar
+
+Heap ve Stack arasında ki en önemli farklardan birisi heapde veriler karışık bir şekilde saklanırken stackte artan ya da azalan adres mantığında çalışır. Buna bağlı olarak heapde yer alan 
+bir veriye erişmek stackte yer alan bir veriye erişmeye göre daha maliyetli bir işlemdir. Başka bir fark ise stackteki veri hemen silinirken heapdeki veri Garbage Collector
+(Çöp toplama mekanizması) algoritmasına bağlıdır.
+
+Stack bellekten statik olarak yer tahsisi için kullanılırken, Heap dinamik olarak yer tahsisi etmeyi sağlar. Her ikisi de Ram bölgesinde bulunur. Stack’te yer alan veriler direk bellek
+içine yerleştirilir dolayısıyla erişimi çok hızlıdır. Heap ise runtime (çalışma zamanı) anında kullanılırlar ve dağınık bir bellek göz yapısı olduğu için erişimi stack kadar kolay olmaz
+dolayısıyla yavaş çalışır. Stack bellekteki veri hemen silinirken Heap bellekteki verinin silinmesi Garbage Collector’a (Çöp toplama mekanizmasına) bağlıdır.
+Stack alanı sınırlı olduğundan çok büyük sayıda ve büyük tiplerde veri atanması belleğin dolmasına sebep olabilir.
+
+Stack veri yapısına üst üste dizili tabaklar örnek verilebilir. Alttaki bir tabağı almak istediğinizde nasıl ki üstündeki tabakları da indirmeniz gerekiyorsa, stack veri yapısında da
+aradaki bir veriyi alabilmek için öncelikle üsttekileri çekmek gerekiyor.
+
+Kullanılacak yerin boyutunu tam olarak biliyorsak Stack, ihtiyacımız olan boyutu tam olarak bilmiyorsak Heap kullanımı daha mantıklı bir tercih olacaktır.
