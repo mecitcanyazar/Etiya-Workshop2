@@ -49,7 +49,7 @@ Ayrıca Javascript’te referans tipinde, 3 üç tane veri tipi vardır. Bunlar:
 
 Primitive'ler
 
-Eğer primitif bir veri tipi, bir değişkene atanırsa, bu değişkeni primitif değeri içeren olarak düşünebiliriz.
+Eğer primitive bir veri tipi, bir değişkene atanırsa, bu değişkeni primitive değeri içeren olarak düşünebiliriz.
 var x = 10;
 var y = 'abc';
 var z = null;
@@ -64,7 +64,7 @@ a and x değişkenleri 10 değerini içeriyor. b and y değişlenleri de 'abc' d
 
 Nesneler(Objects)
 
-Değişkenler; primitif olmayan bir değişkene atandığı zaman, bu değere bir referans verilir. Nesnenin hafızadaki konumuna işaret eder. Bu değişken aslında değişkeni gerçekte içermez.
+Değişkenler; primitive olmayan bir değişkene atandığı zaman, bu değere bir referans verilir. Nesnenin hafızadaki konumuna işaret eder. Bu değişken aslında değişkeni gerçekte içermez.
 Nesneler, bilgisayarınızın belleğinde bir noktada yaratılır. arr = [] yazdığımız zaman, bellekte bir dizi(array) yaratmış oluyoruz. arr değişkenin aldığı adres, dizinin bellekteki konumudur.
 
 			                                       Variables     Values       Adresses    Objects        
